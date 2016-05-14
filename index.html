@@ -1,118 +1,163 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>
-Moriarty.ttf
-</title>
-<style type='text/css'>
+  <title>
+    Moriarty.ttf
+  </title>
+  <style type='text/css'>
 
-  @font-face {
-    font-family: 'Moriarty';
-    src: url('Moriarty.eot?#iefix') format('embedded-opentype'),  url('Moriarty.woff') format('woff'), url('Moriarty.ttf')  format('truetype'), url('Moriarty.svg#Moriarty') format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
+  /* mini reset */
 
-  .moriarty {
+  input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 
+
+    @font-face {
+      font-family: 'Moriarty';
+      src: url('Moriarty.eot?#iefix') format('embedded-opentype'), url('Moriarty.woff') format('woff'), url('Moriarty.ttf') format('truetype'), url('Moriarty.svg#Moriarty') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .moriarty {
       font-family: 'Moriarty' !important;
-  }
+    }
 
-  .mono {
-      font-family: monospace;
-  }
+    .mono {
+      font-family: 'Akkurat-Mono', monospace;
+    }
 
-  body {
+    body {
+      /* ENABLE LIGATURES */
+      -moz-font-feature-settings: "liga=1, dlig=1";
+      -ms-font-feature-settings: "liga", "dlig";
+      -webkit-font-feature-settings: "liga", "dlig";
+      -o-font-feature-settings: "liga", "dlig";
+      font-feature-settings: "liga", "dlig";
+    }
 
-    /* ENABLE LIGATURES */
+    h1,
+    h2 {
+      font-weight: normal;
+    }
 
-    -moz-font-feature-settings: "liga=1, dlig=1";
-    -ms-font-feature-settings: "liga", "dlig";
-    -webkit-font-feature-settings: "liga", "dlig";
-    -o-font-feature-settings: "liga", "dlig";
-    font-feature-settings: "liga", "dlig";
+    h1 {
+      font-size: 40px;
+    }
 
-  }
-  h1, h2{
-    font-weight: normal;
-  }
+    h2 {
+      font-size: 10px;
+    }
 
-  h1 {
-    font-size: 40px;
-  }
+    .reg {
+      color: #333333;
+      background: white;
+    }
 
-  h2 {
-    font-size: 10px;
-  }
 
-  .reg {
-    color: #515D6B;
-    background:white;
-  }
+    .text {
+      margin-top: 20px;
+      padding: 10px 15px;
+    }
 
-  .inverse {
-    color:white;
-    background: #515D6B;
-  }
+    .title {
+      z-index: 1;
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      width: 300px;
+      text-align: right;
+      line-height: 20px;
+    }
 
-  .text {
-    margin-top: 20px;
-    padding: 10px 15px;
-  }
+    textarea {
+      position: absolute;
+      width: 700px;
+      height: 200px;
+      z-index: 0;
+      padding: 30px;
+      font-size: 50px;
 
-  .title {
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    text-align: right;
-  }
+      border: none;
 
-</style>
+      color: #333333;
+
+    }
+
+    .output {
+      position: absolute;
+      width: 700px;
+      height: 200px;
+      top: 50%;
+      z-index: 0;
+      padding: 30px;
+      font-size: 20px;
+
+      color: #333333;
+
+    }
+
+    a {
+      font-style: italic;
+      box-sizing: border-box;
+      padding: 5px;
+      text-decoration: underline;
+      color: #333333;
+    }
+
+    a:hover {
+      font-style: italic;
+      box-sizing: border-box;
+      padding: 5px;
+      color: white;
+      background-color: #333333;
+    }
+
+  </style>
 </head>
+
 <body>
   <div class="title reg">
-    <h1 class="moriarty">Moriarty.ttf</h1>
     <h1 class="mono">Moriarty.ttf</h1>
+    <p class="mono">A font to highlight negative feelings without showing them.</p>
+    <br/>
+    <a class="mono" href="moriarty.ttf">download</a>
   </div>
-  <div class='reg text'>
-    <h1 class="moriarty">
-    I have decided that i am not sad or happy.<br/>
-    I am numb for every emotion. <br/>
-    I do not feel sad or happy. <br/>
-    I do not know what i am. <br/>
-    I do not feel mad or horrible. <br/>
-    I just feel confused and numb. <br/>
-    I still laugh, but then why do i cry?<br/>
-    </h1>
-    <h2 class="mono">
-      I have decided that i am not sad or happy.<br/>
-      I am numb for every emotion. <br/>
-      I do not feel sad or happy. <br/>
-      I do not know what i am. <br/>
-      I do not feel mad or horrible. <br/>
-      I just feel confused and numb. <br/>
-      I still laugh, but then why do i cry?<br/>
-    </h2>
+
+
+
+  <textarea name="" id="input" class="moriarty" autofocus placeholder="begin typing">
+  </textarea>
+
+
+
+  <div class="output mono">
+
   </div>
-  <div class='inverse text'>
-    <h1 class="moriarty">
-    I have decided that i am not sad or happy.<br/>
-    I am numb for every emotion. <br/>
-    I do not feel sad or happy. <br/>
-    I do not know what i am. <br/>
-    I do not feel mad or horrible. <br/>
-    I just feel confused and numb. <br/>
-    I still laugh, but then why do i cry?<br/>
-    </h1>
-    <h2 class="mono">
-      I have decided that i am not sad or happy.<br/>
-      I am numb for every emotion. <br/>
-      I do not feel sad or happy. <br/>
-      I do not know what i am. <br/>
-      I do not feel mad or horrible. <br/>
-      I just feel confused and numb. <br/>
-      I still laugh, but then why do i cry?<br/>
-    </h2>
-  </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    $('#input').keyup(function() {
+      var text = $('textarea#input').val();
+
+      console.log(text);
+
+      $('.output').empty();
+
+      $('.output').append(text);
+
+
+    });
+
+
+  </script>
 </body>
+
 </html>
